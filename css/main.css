@@ -1,0 +1,141 @@
+
+/* Header! */
+.footer, .header-main{
+    background-color: #03A9F4;
+
+}
+.header-main {
+    /* height: 50vh; */
+    margin-bottom: 0px;
+    display: grid;
+
+    grid-template-rows: 0.1fr 1fr;
+    
+}
+
+.header-main .nav-header{
+    display: flex;
+    justify-content: flex-end;
+}
+.header-main .nav-header a{
+    margin-right: 1rem;
+    
+}
+
+.header-main .title {
+    /* padding: 4rem; */
+    
+    margin-top: 5rem;
+    grid-row: 2 / span 6;
+    
+}
+
+
+
+/* Main */
+/* abaout */
+.abaout {
+    background-color:white;
+    margin-top: 0px;
+    height: 30vh;
+    padding: 10rem;
+}
+
+
+/* work */
+.works {
+    background-color: #2196F3;
+    padding: 0.5rem;
+    padding-bottom: 4rem;
+    /* margin: 10px; */
+    height: 60vh;    
+}
+
+.works .work-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 0.1rem;
+    
+}
+.works .work{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 200px;
+    margin-bottom: .5rem;
+    
+    background-color: white;
+    border: 1px solid rgba(0,0,0, 0.5);
+   
+}
+.works .work img {
+    align-self: center;
+}
+
+/* contact */
+.contact {
+    background-color: #3F51B5;
+    height: 200px;
+    padding: 1rem;
+    
+}
+/* message */
+
+.message{
+    /* height: 50vh; */
+    padding: 0.5rem;
+}
+
+
+.footer {
+    height: 4rem;
+    margin-bottom: 0px;
+    
+}
+
+
+.title{
+    text-align: center; 
+    align-items: center;
+    margin-top: 0px;
+}
+
+.form-message {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    
+}
+
+input{
+    outline: 0;
+    border: 1px solid #4DBA7A;
+    box-sizing: border-box;
+    font-size: 16px;
+    width: 100%;
+    padding: 0.5em;
+
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+a {
+    padding: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: .5s;
+    border-radius: 5px;
+    color: black;
+}
+a:hover{
+    color: #9799A6;
+    
+}
