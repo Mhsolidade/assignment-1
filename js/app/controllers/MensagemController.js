@@ -38,7 +38,7 @@ class MensagemController {
         http.addEventListener("load", function() {
             if(http.readyState == 4 && http.status == 201) {
                  console.log(`Resposta: ${http.response}`);
-g            }else {
+            }else {
                 console.log("erro");
             }
             
