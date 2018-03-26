@@ -5,31 +5,47 @@ class MensagemController {
         this._inputNome     = $("#nome");
         this._inputEmail    = $("#email");  
         this._inputEmpresa  = $("#empresa");
-
-
+        
+        
     }
-
+    
     adiciona(event) {
         event.preventDefault();
         
-        ValidaHelper.email(this._inputEmail.value);
-        ValidaHelper.nulo(this._inputNome);
-        ValidaHelper.nulo(this._inputEmpresa);
         let mensagem  = this._criaMensagem();
-
-        alert(mensagem.nome);
-
+        this._enviandoDados(JSON.stringify(mensagem.toJSON));
 
     }
 
     _criaMensagem() {
         return new Mensagem (
-            this._inputNome.value,   
-            this._inputEmail.value, 
-            this._inputEmpresa.value
+            ValidaHelper.nulo(this._inputNome),   
+            ValidaHelper.email(this._inputEmail.value), 
+            ValidaHelper.nulo(this._inputEmpresa)
         );
+        
+    }
+    
+    _enviandoDados(dados) {
+        let http = new XMLHttpRequest;
+        // let url = "https://solidade-json-server.herokuapp.com/pesoas";
+
+        let url ="http://localhost:3000/Pessoas";
+        http.open("POST", url, true);
+        http.setRequestHeader("Content-Type", "application/json");
+
+       
+        http.addEventListener("load", function() {
+            if(http.readyState == 4 && http.status == 201) {
+                 console.log(`Resposta: ${http.response}`);
+            }else {
+                console.log("erro");
+            }
+            
+        });
+        
+        http.send(dados);
 
     }
-
 
 }

@@ -1,12 +1,17 @@
-
+*{
+    margin: 0px;
+    font-family: 'Futura W01', helvetica, san-serif;
+    line-height: 1;
+    color: rgba(12, 12, 10, 0.8);
+}
 /* Header! */
 .footer, .header-main{
     background-color: #03A9F4;
 
 }
 .header-main {
-    /* height: 50vh; */
-    margin-bottom: 0px;
+    height: 50vh;
+    margin-bottom: px;
     display: grid;
 
     grid-template-rows: 0.1fr 1fr;
@@ -37,24 +42,31 @@
 .abaout {
     background-color:white;
     margin-top: 0px;
-    height: 30vh;
-    padding: 10rem;
+    /* height: 30vh; */
+    display: flex;
+    flex-direction: column;
+    /* padding: 10rem; */
+}
+
+.abaout p {
+    margin: 4rem;
+    align-self: center;
 }
 
 
 /* work */
 .works {
     background-color: #2196F3;
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     padding-bottom: 4rem;
     /* margin: 10px; */
-    height: 60vh;    
+    /* height: 60vh;     */
 }
 
 .works .work-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 0.1rem;
+    /* grid-gap: 0.1rem; */
     
 }
 .works .work{
@@ -67,9 +79,6 @@
     background-color: white;
     border: 1px solid rgba(0,0,0, 0.5);
    
-}
-.works .work img {
-    align-self: center;
 }
 
 /* contact */
@@ -97,7 +106,7 @@
 .title{
     text-align: center; 
     align-items: center;
-    margin-top: 0px;
+    padding: 2rem;
 }
 
 .form-message {

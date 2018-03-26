@@ -19,6 +19,14 @@ class Mensagem {
 
     }
 
+     get toJSON() {
+        return {
+            nome: this.nome,
+            email: this.email,
+            empresa: this.empresa
+        };
+    }
+
 
 
 }
