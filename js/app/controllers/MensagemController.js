@@ -28,9 +28,9 @@ class MensagemController {
     
     _enviandoDados(dados) {
         let http = new XMLHttpRequest;
-        // let url = "https://solidade-json-server.herokuapp.com/pesoas";
+        let url = "https://solidade-json-server.herokuapp.com/pesoas";
 
-        let url ="http://localhost:3000/Pessoas";
+        // let url ="http://localhost:3000/Pessoas";
         http.open("POST", url, true);
         http.setRequestHeader("Content-Type", "application/json");
 
@@ -38,7 +38,7 @@ class MensagemController {
         http.addEventListener("load", function() {
             if(http.readyState == 4 && http.status == 201) {
                  console.log(`Resposta: ${http.response}`);
-            }else {
+g            }else {
                 console.log("erro");
             }
             
