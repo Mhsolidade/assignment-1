@@ -12,11 +12,11 @@
 <body>
     <header class="header-main">
         <div class="container">
-            <nav class="nav-header">
-                <a href="#about">About</a>
-                <a href="#Works">Work</a>
-                <a href="#contact">About</a>
-                <a href="#message">Message</a>
+            <nav class="nav-header" >
+                <a href="#about">Sobre</a>
+                <a href="#Works">Trabalhos</a>
+                <a href="#contact">Contato</a>
+                <a href="#message">Recado</a>
             </nav>
             <div class="title">
                 <h1>Desenvolvedor</h1>
@@ -83,24 +83,25 @@
         <section class="message">
             <h1 class="title">Deixe um recado</h1>
             <div  class="form-message">
-                <form onsubmit="mensagemController.adiciona(event)">
+                <form class=" " onsubmit="mensagemController.adiciona(event)">
                 <div>
                     <label for="nome">nome completo</label>
-                    <input type="text" id="nome" required>
-                
+                    
+                    <input class="input-default" type="text" id="nome" required>
                     <label for="email">email</label>
-                    <input type="email" id="email" required>
+                    <input class="input-default" type="email" id="email" required>
                 
                     <label for="empresa">empresa</label>
-                    <input type="text" id="empresa" required>
-
+                    <input class="input-default" type="text" id="empresa" required>
+                   
+                        <ul id="mesagem-erro">
+                            
+                        </ul>
+                    
                     <button type="submit">Send</button>
                     
                 </div>
-
-    
-                    
-                            
+     
                 </form>
     
             </div>
@@ -116,6 +117,8 @@
     <script src="js/app/controllers/MensagemController.js"></script>
     <script src="js/app/models/Mensagem.js"></script>
     <script src="js/app/helpers/ValidaHelper.js"></script>
+    
+    
     <!-- C:\projetos-gama\assignment-1\js\app\models\Mensagem.js -->
     <script>
         let mensagemController = new MensagemController();

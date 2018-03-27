@@ -111,19 +111,40 @@
 
 .form-message {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     
 }
-
 input{
     outline: 0;
-    border: 1px solid #4DBA7A;
-    box-sizing: border-box;
     font-size: 16px;
     width: 100%;
     padding: 0.5em;
+    margin: 0.5rem 0px 1rem;
 
+}
+
+.input-default{
+    border: 1px solid #4DBA7A;
+    box-sizing: border-box;
+
+}
+.input-default:focus{
+    border: 1px solid #03A9F4;
+}
+
+.input-erro{
+    border: 1px solid red;
+    box-shadow: 0 0 1rem 0.2rem #ff353598;
+}
+.input-erro:focus{
+    border: 1px solid #03A9F4;
+}
+#mesagem-erro li{
+    color: red;
+}
+.mesagem-hidden{
+    
+    display: none;
 }
 
 button {
@@ -136,7 +157,7 @@ button {
     cursor: pointer;
 }
 
-a {
+.nav-header a {
     padding: 10px;
     margin-bottom: 10px;
     text-decoration: none;
@@ -144,7 +165,7 @@ a {
     border-radius: 5px;
     color: black;
 }
-a:hover{
+.nav-header a:hover{
     color: #9799A6;
     
 }

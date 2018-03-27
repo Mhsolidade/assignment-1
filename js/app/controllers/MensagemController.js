@@ -1,12 +1,10 @@
 class MensagemController {
     constructor() {
         let $ = document.querySelector.bind(document);
-
         this._inputNome     = $("#nome");
         this._inputEmail    = $("#email");  
         this._inputEmpresa  = $("#empresa");
-        
-        
+
     }
     
     adiciona(event) {
@@ -20,7 +18,7 @@ class MensagemController {
     _criaMensagem() {
         return new Mensagem (
             ValidaHelper.nulo(this._inputNome),   
-            ValidaHelper.email(this._inputEmail.value), 
+            ValidaHelper.email(this._inputEmail), 
             ValidaHelper.nulo(this._inputEmpresa)
         );
         
@@ -28,18 +26,20 @@ class MensagemController {
     
     _enviandoDados(dados) {
         let http = new XMLHttpRequest;
-        let url = "https://solidade-json-server.herokuapp.com/pesoas";
+        let url = "https://solidade-assignment1.firebaseio.com/pessoas.json";
 
         // let url ="http://localhost:3000/Pessoas";
-        http.open("POST", url, true);
+        http.open("POST", url);
         http.setRequestHeader("Content-Type", "application/json");
 
        
         http.addEventListener("load", function() {
-            if(http.readyState == 4 && http.status == 201) {
+            console.log(http);
+
+            if(http.readyState == 4 && (http.status == 200 || http.status == 201 ) ) {
                  console.log(`Resposta: ${http.response}`);
             }else {
-                console.log("erro");
+                console.log();
             }
             
         });
