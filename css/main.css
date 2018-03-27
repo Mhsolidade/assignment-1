@@ -88,20 +88,14 @@
     padding: 1rem;
     
 }
-/* message */
-
-.message{
-    /* height: 50vh; */
-    padding: 0.5rem;
-}
 
 
-.footer {
-    height: 4rem;
-    margin-bottom: 0px;
+
+.form-message {
+    display: flex;
+    justify-content: center;
     
 }
-
 
 .title{
     text-align: center; 
@@ -109,11 +103,6 @@
     padding: 2rem;
 }
 
-.form-message {
-    display: flex;
-    justify-content: center;
-    
-}
 input{
     outline: 0;
     font-size: 16px;
