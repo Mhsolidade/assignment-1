@@ -109,11 +109,20 @@
 }
 
 /* style gerais */
-.title{
+.title, .recebido{
     text-align: center; 
     align-items: center;
     padding: 2rem;
 }
+.recebido {
+    
+    color:#33cc33;
+    font-size: 20;
+}
+.recebido-hiden {
+    display: none;
+}
+
 
 .form-message {
     display: flex;

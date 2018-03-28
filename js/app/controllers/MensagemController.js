@@ -12,6 +12,8 @@ class MensagemController {
         
         let mensagem  = this._criaMensagem();
         this._enviandoDados(JSON.stringify(mensagem.toJSON));
+        this._limpaForm();
+        this._mensagemDeEnvio();
 
     }
 
@@ -46,6 +48,18 @@ class MensagemController {
         
         http.send(dados);
 
+    }
+
+    _limpaForm(){
+        this._inputNome.value     = '';
+        this._inputEmail.value    = '';  
+        this._inputEmpresa.value  = '';
+
+
+    }
+
+    _mensagemDeEnvio(){
+        document.querySelector("#recebido").classList.remove("recebido-hiden");
     }
 
 }
