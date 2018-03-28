@@ -7,21 +7,25 @@
 /* Header! */
 .footer, .header-main{
     background-color: #03A9F4;
-
+    
 }
 .header-main {
     height: 50vh;
     margin-bottom: px;
     display: grid;
-
+    
     grid-template-rows: 0.1fr 1fr;
     
 }
 
-.header-main .nav-header{
+.header-main .nav-header ul{
     display: flex;
     justify-content: flex-end;
+    list-style-type: none;
+    margin: 2rem;
+    padding: 0;
 }
+
 .header-main .nav-header a{
     margin-right: 1rem;
     
@@ -66,7 +70,7 @@
 .works .work-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    /* grid-gap: 0.1rem; */
+    grid-gap: 1rem;
     
 }
 .works .work{
@@ -75,42 +79,60 @@
     align-items: center;
     height: 200px;
     margin-bottom: .5rem;
+
+    background-image: url("../img/work.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+   
     
     background-color: white;
-    border: 1px solid rgba(0,0,0, 0.5);
-   
-}
-
-/* contact */
-.contact {
-    background-color: #3F51B5;
-    height: 200px;
-    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.856);
+    
     
 }
 
+.work-grid .work h2{
+    color: antiquewhite;
+    /* font-size: 90px; */
+    text-align: center;
+    margin: 2rem;
+}
 
+/* footer */
 
-.form-message {
-    display: flex;
-    justify-content: center;
+.footer {
+    height: 4rem;
+    margin-bottom: 0px;
+    
     
 }
 
+/* style gerais */
 .title{
     text-align: center; 
     align-items: center;
     padding: 2rem;
 }
 
+.form-message {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* width: 80%;  */
+    align-items: center;
+    /* justify-content: space-between; */
+    
+}
 input{
     outline: 0;
     font-size: 16px;
-    width: 100%;
+    width: 60%;
     padding: 0.5em;
     margin: 0.5rem 0px 1rem;
 
 }
+
 
 .input-default{
     border: 1px solid #4DBA7A;
@@ -144,6 +166,7 @@ button {
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
+
 }
 
 .nav-header a {

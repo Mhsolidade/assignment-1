@@ -13,10 +13,12 @@
     <header class="header-main">
         <div class="container">
             <nav class="nav-header" >
-                <a href="#about">Sobre</a>
-                <a href="#Works">Trabalhos</a>
-                <a href="#contact">Contato</a>
-                <a href="#message">Recado</a>
+                <ul>
+                    <li> <a href="#about">Sobre</a></li>
+                    <li><a href="#works">Trabalhos</a></li>
+                    <li><a href="#message">Recado</a></li>
+                </ul>
+                
             </nav>
             <div class="title">
                 <h1>Desenvolvedor</h1>
@@ -29,7 +31,7 @@
 
     </header>
     <main class="main">
-        <section class="abaout">
+        <section class="abaout" id="about">
             <h1 class="title">Sobre</h1>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -46,25 +48,24 @@
                 consequuntur?
             </p>
         </section>
-        <div class="works">
+        <div class="works" id="works">
             <h2 class="title">Trabalhos Realizados</h2>
             <div class="work-grid">
                 <div class="work"> 
-                    <h2>titulo</h2>
-                    <img src="https://fakeimg.pl/200x100/" alt="">
+                    <h2>Lorem</h2>
                 </div>
                 <div class="work"> 
-                        <h2>titulo</h2>
-                        <img src="https://fakeimg.pl/200x100/" alt="">
+                        <h2>Lorem, ipsum.</h2>
+                       
                 </div>
                 <div class="work"> 
-                        <h2>titulo</h2>
-                        <img src="https://fakeimg.pl/200x100/" alt="">
+                        <h2>Lorem, ipsum dolor.</h2>
+                        
                 </div>
             
                 <div class="work"> 
-                        <h2>titulo</h2>
-                        <img src="https://fakeimg.pl/200x100/" alt="">
+                        <h2>Lorem, ipsum.</h2>
+                        
                 </div>
             
                 
@@ -73,11 +74,11 @@
             </div>
         </div>
        
-        <section class="message">
+        <section class="message" id="message" >
             <h1 class="title">Deixe um recado</h1>
-            <div  class="form-message">
+            
                 <form class=" " onsubmit="mensagemController.adiciona(event)">
-                <div>
+                <div class="form-message">
                     <label for="nome">nome completo</label>
                     
                     <input class="input-default" type="text" id="nome" required>
@@ -97,7 +98,7 @@
      
                 </form>
     
-            </div>
+           
            
         </section>
     </main>
