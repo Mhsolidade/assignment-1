@@ -82,7 +82,7 @@
 
     background-image: url("../img/work.jpg");
     background-repeat: no-repeat;
-    background-position: right top;
+    background-position: center top;
     background-attachment: fixed;
    
     
@@ -103,7 +103,7 @@
 
 .footer {
     height: 4rem;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
     
     
 }
